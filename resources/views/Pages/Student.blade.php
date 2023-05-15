@@ -1,5 +1,24 @@
 @extends('welcome')
 @section('content')
-    <h1>Ini Student</h1>
-    <p>{{ $data_siswa }}</p>
+    <h4 class="text-center fw-bold mt-2">Daftar Nama Siswa/Siswi</h4>
+    <table class="table table-siswa border">
+        <thead>
+            <tr>
+                <th class="border text-center" scope="col">No</th>
+                <th class="border text-center" scope="col">Nama</th>
+                <th class="border text-center"scope="col">NIS</th>
+                <th class="border text-center" scope="col">Kelas</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($data_siswa as $siswa)
+                <tr>
+                    <th class="border text-center" scope="row">{{ $loop->iteration }}</th>
+                    <td class="border">{{ $siswa->name }}</td>
+                    <td class="border">{{ $siswa->NIS }}</td>
+                    <td class="border">{{ $siswa->kelas }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection

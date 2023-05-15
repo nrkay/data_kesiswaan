@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\ExtracurricularController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +20,7 @@ Route::get('/', function () {
     return view('Pages.Home');
 });
 
-Route::get('/class', function () {
-    return view('Pages.Class');
-});
+
 
 Route::get('/ekskul', function () {
     return view('Pages.Ekskul');
@@ -28,3 +28,5 @@ Route::get('/ekskul', function () {
 
 
 Route::get('/student', [StudentController::class, 'index']);
+Route::get('/class', [ClassroomController::class, 'index']);
+Route::get('/ekskul', [ExtracurricularController::class, 'index']);

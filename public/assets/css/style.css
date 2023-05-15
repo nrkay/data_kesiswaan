@@ -1,0 +1,10 @@
+/* body {
+    background-color: blue;
+}; */
+
+/*CSS untuk tampilan kecil dan sedang*/
+@media only screen and (max-width: 901px) {
+    .table-siswa {
+        overflow-x: scroll;
+    }
+}

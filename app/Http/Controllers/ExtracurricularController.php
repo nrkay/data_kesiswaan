@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class ExtracurricularController extends Controller
 {
-    $data = [
-        [],
-        [],
-    ];
+
+    // $data = [
+    //     [],
+    //     [],
+    // ];
+
+    // foreach ($data as $row) {
+    //     DB::table('homeroom_teachers')->updateOrInsert($row);
+    // }
 }

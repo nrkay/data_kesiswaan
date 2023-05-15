@@ -16,16 +16,16 @@ class ExtracurricularsTableSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['nama_wali_kelas' => 'Nur Khairiyah'],
-            ['nama_wali_kelas' => 'Nur Azizah'],
-            ['nama_wali_kelas' => 'Siti Nurhaliza'],
-            ['nama_wali_kelas' => 'Rosiati Nurul'],
-            ['nama_wali_kelas' => 'Miswandi'],
-            ['nama_wali_kelas' => 'Susianto'],
+            ['nama_extracurricular' => 'UKBA'],
+            ['nama_extracurricular' => 'PPIPM'],
+            ['nama_extracurricular' => 'Pramuka'],
+            ['nama_extracurricular' => 'PMR'],
+            ['nama_extracurricular' => 'Rohis'],
+            ['nama_extracurricular' => 'Basket'],
         ];
 
         foreach ($data as $row) {
-            DB::table('homeroom_teachers')->updateOrInsert($row);
+            DB::table('extracurriculars')->updateOrInsert($row);
         }
     }
 }
