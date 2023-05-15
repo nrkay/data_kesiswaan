@@ -16,7 +16,8 @@
                     <th class="border text-center" scope="row">{{ $loop->iteration }}</th>
                     <td class="border">{{ $siswa->name }}</td>
                     <td class="border">{{ $siswa->NIS }}</td>
-                    <td class="border">{{ $siswa->kelas }}</td>
+                    <td class="border">{{ $siswa->classroom->kelas }}</td>
+
                 </tr>
             @endforeach
         </tbody>

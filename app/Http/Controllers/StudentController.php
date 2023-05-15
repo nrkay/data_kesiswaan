@@ -10,7 +10,7 @@ class StudentController extends Controller
 {
     public function index()
     {
-        $data = Student::all();
+        $data = Student::with('classroom')->get();
         return view('Pages.Student', ['data_siswa' => $data]);
         dd($data);
     }
