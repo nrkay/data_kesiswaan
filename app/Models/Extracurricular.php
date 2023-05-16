@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Extracurricular extends Model
 {
     use HasFactory;
+    public function students()
+    {
+        return $this->belongsToMany(Student::class, 'extracurricular_activities', 'siswa', 'extracurricular');
+    }
 }

@@ -10,7 +10,7 @@ class ExtracurricularController extends Controller
 
     public function index()
     {
-        $data = Extracurricular::all();
+        $data = Extracurricular::with('students')->get();
         return view('Pages.Ekskul', ['ekskul' => $data]);
         dd($data);
     }

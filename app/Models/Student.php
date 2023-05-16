@@ -12,4 +12,9 @@ class Student extends Model
     {
         return $this->belongsTo(Classroom::class, 'kelas', 'id');
     }
+
+    public function extracurriculars()
+    {
+        return $this->belongsToMany(Extracurricular::class, 'extracurricular_activities', 'siswa', 'extracurricular');
+    }
 }

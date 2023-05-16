@@ -1,6 +1,7 @@
 @extends('welcome')
 @section('content')
-    <h4 class="text-center fw-bold my-4">Daftar Nama Siswa/Siswi</h4>
+    <h4 class="text-center fw-bold my-4">
+        Daftar Nama Siswa/Siswi</h4>
     <table class="table table-siswa border">
         <thead>
             <tr>
@@ -8,6 +9,7 @@
                 <th class="border text-center" scope="col">Nama</th>
                 <th class="border text-center"scope="col">NIS</th>
                 <th class="border text-center" scope="col">Kelas</th>
+                <th class="border text-center" scope="col">Extracurricular</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +19,12 @@
                     <td class="border">{{ $siswa->name }}</td>
                     <td class="border">{{ $siswa->NIS }}</td>
                     <td class="border">{{ $siswa->classroom->kelas }}</td>
+
+                    <td class="border">
+                        @foreach ($siswa->extracurriculars as $ekskul)
+                            - {{ $ekskul->nama_extracurricular }} <br>
+                        @endforeach
+                    </td>
 
                 </tr>
             @endforeach
