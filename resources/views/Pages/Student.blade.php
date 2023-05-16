@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-    <h4 class="text-center fw-bold mt-2">Daftar Nama Siswa/Siswi</h4>
+    <h4 class="text-center fw-bold my-4">Daftar Nama Siswa/Siswi</h4>
     <table class="table table-siswa border">
         <thead>
             <tr>

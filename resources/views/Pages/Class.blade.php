@@ -14,10 +14,10 @@
                 <tr>
                     <th class="border border-3 text-center" scope="row">{{ $loop->iteration }}</th>
                     <td class="border border-3">{{ $data->kelas }}</td>
-                    {{-- <td class="border border-3"> {{ $data->student }} --}}
-                    @foreach ($data->student as $students)
-                        - {{ $students->name }} <br>
-                    @endforeach
+                    <td class="border border-3">
+                        @foreach ($data->student as $students)
+                            - {{ $students->name }} <br>
+                        @endforeach
                     </td>
                 </tr>
             @endforeach

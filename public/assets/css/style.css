@@ -2,6 +2,20 @@
     background-color: blue;
 }; */
 
+.section-ekskul{
+    /* background-color: antiquewhite; */
+    width: 700px;
+}
+
+.section-ekskul table{
+    border-style: solid;
+    border-color: #0C134F;
+}
+
+
+.section-ekskul table tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
 /*CSS untuk tampilan kecil dan sedang*/
 @media only screen and (max-width: 901px) {
     .table-siswa {

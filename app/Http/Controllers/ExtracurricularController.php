@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Extracurricular;
 use Illuminate\Http\Request;
 
 class ExtracurricularController extends Controller
 {
 
-    // $data = [
-    //     [],
-    //     [],
-    // ];
-
-    // foreach ($data as $row) {
-    //     DB::table('homeroom_teachers')->updateOrInsert($row);
-    // }
+    public function index()
+    {
+        $data = Extracurricular::all();
+        return view('Pages.Ekskul', ['ekskul' => $data]);
+        dd($data);
+    }
 }
