@@ -9,6 +9,7 @@
                 <th class="border text-center" scope="col">Nama</th>
                 <th class="border text-center"scope="col">NIS</th>
                 <th class="border text-center" scope="col">Kelas</th>
+                <th class="border text-center" scope="col">Wali Kelas</th>
                 <th class="border text-center" scope="col">Extracurricular</th>
             </tr>
         </thead>
@@ -19,7 +20,7 @@
                     <td class="border">{{ $siswa->name }}</td>
                     <td class="border">{{ $siswa->NIS }}</td>
                     <td class="border">{{ $siswa->classroom->kelas }}</td>
-
+                    <td class="border">{{ $siswa->classroom->homeroom_teacher->nama_wali_kelas }}</td>
                     <td class="border">
                         @foreach ($siswa->extracurriculars as $ekskul)
                             - {{ $ekskul->nama_extracurricular }} <br>
