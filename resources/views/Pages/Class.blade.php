@@ -6,6 +6,7 @@
             <tr>
                 <th class="border border-3 text-center" scope="col">No</th>
                 <th class="border border-3" scope="col">Nama Kelas</th>
+                <th class="border border-3" scope="col">Wali Kelas</th>
                 <th class="border border-3"scope="col">Daftar Siswa</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
                 <tr>
                     <th class="border border-3 text-center" scope="row">{{ $loop->iteration }}</th>
                     <td class="border border-3">{{ $data->kelas }}</td>
+                    <td class="border border-3">{{ $data->homeroom_teacher->nama_wali_kelas }}</td>
                     <td class="border border-3">
                         @foreach ($data->student as $students)
                             - {{ $students->name }} <br>

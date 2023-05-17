@@ -16,15 +16,13 @@
                         <th class="border" scope="row">{{ $loop->iteration }}</th>
                         <td class="border">{{ $item->nama_extracurricular }}</td>
                         <td class="border">
-                            {{-- @foreach ($item->students as $anggota)
-                                -{{ $anggota->$name }} <br>
-                            @endforeach --}}
+                            @foreach ($item->students as $anggota)
+                                -{{ $anggota->name }} <br>
+                            @endforeach
                         </td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
-
-    <p>{{ $ekskul }}</p>
 @endsection

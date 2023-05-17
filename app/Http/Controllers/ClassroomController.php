@@ -12,7 +12,7 @@ class ClassroomController extends Controller
     {
         // $data = Student::all();
         // $classrooms = Classroom::with('student')->get();
-        $data = Classroom::with('Student')->get();
+        $data = Classroom::with('student', 'homeroom_teacher')->get();
         return view('Pages.Class', ['data' => $data]);
     }
 }
