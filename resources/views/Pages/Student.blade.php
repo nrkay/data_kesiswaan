@@ -11,6 +11,8 @@
                 <th class="border text-center" scope="col">Kelas</th>
                 <th class="border text-center" scope="col">Wali Kelas</th>
                 <th class="border text-center" scope="col">Extracurricular</th>
+                <th class="border text-center" scope="col">Action</th>
+
             </tr>
         </thead>
         <tbody>
@@ -25,6 +27,10 @@
                         @foreach ($siswa->extracurriculars as $ekskul)
                             - {{ $ekskul->nama_extracurricular }} <br>
                         @endforeach
+                    </td>
+                    <td class="border text-center"><a href="/detail/{{ $siswa->id }}">
+                            <button type="button" class="btn btn-info">Detail</button>
+                        </a>
                     </td>
 
                 </tr>

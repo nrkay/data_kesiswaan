@@ -26,6 +26,8 @@ Route::get('/ekskul', function () {
     return view('Pages.Ekskul');
 });
 
+Route::get('/detail/{id}', [StudentController::class, 'show']);
+
 
 Route::get('/student', [StudentController::class, 'index']);
 Route::get('/class', [ClassroomController::class, 'index']);

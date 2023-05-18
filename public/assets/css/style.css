@@ -12,6 +12,14 @@
     border-color: #0C134F;
 }
 
+.detail-mahasiswa {
+    width: 400px;
+}
+
+.detail-mahasiswa table tr th{
+    border: 1px solid;
+}
+
 
 .section-ekskul table tbody tr:nth-of-type(odd) {
     background-color: #f9f9f9;

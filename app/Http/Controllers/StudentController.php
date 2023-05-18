@@ -14,4 +14,10 @@ class StudentController extends Controller
         // dd($data);
         return view('Pages.Student', ['data_siswa' => $data]);
     }
+
+    public function show($id)
+    {
+        $data = Student::with('classroom.homeroom_teacher', 'extracurriculars')->find($id);
+        return view('Pages.detailStudent', ['data_siswa' => $data]);
+    }
 }
