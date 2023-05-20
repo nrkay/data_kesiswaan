@@ -35,4 +35,17 @@ class StudentController extends Controller
         $data = $request->only(['name', 'NIS', 'kelas']);
         Student::create($data);
     }
+    public function edit($id)
+    {
+        $class = Classroom::all();
+        $data = Student::with('classroom.homeroom_teacher', 'extracurriculars')->find($id);
+        return view('Pages.editStudent', ['data' => $data, 'class' => $class]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->only(['name', 'NIM', 'kelas']);
+        $model = Student::find($id);
+        $model->update($data);
+    }
 }

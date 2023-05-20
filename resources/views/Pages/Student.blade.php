@@ -33,7 +33,7 @@
                             @endforeach
                         </td>
                         <td class="border text-center"><a href="/detail/{{ $siswa->id }}">
-                                <button type="button" class="btn btn-info">Detail</button>
+                                <button type="button" class="btn btn-detail-student">Detail</button>
                             </a>
                         </td>
 

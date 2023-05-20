@@ -28,7 +28,10 @@ Route::get('/ekskul', function () {
 
 Route::get('/detail/{id}', [StudentController::class, 'show']);
 Route::get('/addStudent', [StudentController::class, 'add']);
+Route::get('/editStudent/{id}', [StudentController::class, 'edit']);
 Route::post('/addStudent', [StudentController::class, 'store']);
+Route::put('/editStudent/{id}', [StudentController::class, 'update']);
+
 
 
 

@@ -2,6 +2,22 @@
     background-color: #F1F6F9;
 }; */
 
+/* style editStuden.blade.php */
+.table-edit {
+    background-color: white;
+    border-radius: 25px;
+}
+/* End style editStudent.blade.php */
+.btn-edit-data {
+    background-color: #394867 !important;
+    color: white;
+}
+
+.btn-edit-data:hover {
+    background-color: #9BA4B5 !important;
+    color: white;
+}
+
 .navbar{
     background-color: #6C9BCF;
 }
@@ -14,14 +30,25 @@
     border-style: solid;
     border-color: #0C134F;
 }
-
+/* 
 .detail-mahasiswa {
-    width: 400px;
+    width: 600px;
+} */
+
+.main-detail-mahasiswa {
+    background-color: #EEEEEE !important;
+    border-radius: 25px;
 }
 
-.detail-mahasiswa table tr th{
-    border: 1px solid;
+.detail-siswa table tr td {
+    background-color: white !important;
 }
+.detail-siswa table tr th {
+    background-color: #6C9BCF !important;
+    color: white !important;
+}
+
+
 
 
 .section-ekskul table tbody tr:nth-of-type(odd) {
@@ -74,6 +101,14 @@
 
 
 /* style studen.blade.app */
+.btn-detail-student{
+    background-color: #394867 !important;
+    color: white;
+}
+.btn-detail-student:hover{
+    background-color: #9BA4B5 !important;
+    color: white;
+}
 .btn-add-data:hover{
     background-color: #9BA4B5 !important;
     color: white;
