@@ -11,11 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body @yield('background')>
 
     <!-- Example Code -->
 
-    <nav class="navbar container-lg navbar-expand-lg bg-primary rounded-5 rounded-top">
+    <nav class="navbar container-lg navbar-expand-lg rounded-5 rounded-top">
         <div class="container-fluid d-flex justify-content-end">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,7 +1,10 @@
 /* body {
-    background-color: blue;
+    background-color: #F1F6F9;
 }; */
 
+.navbar{
+    background-color: #6C9BCF;
+}
 .section-ekskul{
     /* background-color: antiquewhite; */
     width: 700px;
@@ -24,6 +27,87 @@
 .section-ekskul table tbody tr:nth-of-type(odd) {
     background-color: #f9f9f9;
 }
+
+
+
+
+/* style addData.blade.php */
+ .input-student::placeholder {
+    font-size: 13px; /* Ubah ukuran font sesuai kebutuhan Anda */
+    color: #999999; /* Ubah warna font sesuai kebutuhan Anda */
+  }
+.input-student{
+    border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.select-class{
+    border: none;
+  outline: none;
+  box-shadow: none;
+}
+.form-add {
+    border-bottom: 1px solid #0C134F;
+}
+
+.form-add label {
+    font-size: small;
+    font-weight: bold;
+    color: #0C134F;
+}
+.btn-submit-student{
+    background-color: #394867 !important;
+    color: white;
+}
+
+.btn-submit-student:hover{
+    background-color: #9BA4B5 !important;
+    color: white;
+}
+/* end style addData.blade.php */
+
+
+
+
+
+
+
+/* style studen.blade.app */
+.btn-add-data:hover{
+    background-color: #9BA4B5 !important;
+    color: white;
+}
+.btn-add-data{
+    background-color: #394867 !important;
+    color: white;
+}
+.title{
+    color: #576CBC !important;
+}
+.student-table {
+    margin: 10px;
+    background-color: #EEEEEE;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    /* padding: 60px; */
+    border-radius: 25px;
+} 
+
+.student-table .table {
+    background-color: white;
+}
+
+.student-table .table tr th{
+    background-color: #6C9BCF;
+    color: white;
+
+}
+/* .student-table .table tr td{
+    border: 1px solid #B2B2B2 !important;
+    border-radius: 25px;
+
+} */
+/* End style student.blade.php */
 /*CSS untuk tampilan kecil dan sedang*/
 @media only screen and (max-width: 901px) {
     .table-siswa {

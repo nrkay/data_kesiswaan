@@ -3,8 +3,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 use App\Models\Student;
+
 
 class StudentController extends Controller
 {
@@ -19,5 +21,18 @@ class StudentController extends Controller
     {
         $data = Student::with('classroom.homeroom_teacher', 'extracurriculars')->find($id);
         return view('Pages.detailStudent', ['data_siswa' => $data]);
+    }
+
+    public function add()
+    {
+        $data = Classroom::all();
+        return view('Pages.addStudent', ['data' => $data]);
+    }
+
+    public function store(Request $request)
+    {
+        // dd($request);
+        $data = $request->only(['name', 'NIS', 'kelas']);
+        Student::create($data);
     }
 }
