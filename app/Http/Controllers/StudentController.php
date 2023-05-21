@@ -6,6 +6,9 @@ namespace App\Http\Controllers;
 use App\Models\Classroom;
 use Illuminate\Http\Request;
 use App\Models\Student;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+use App\Models\ExtracurricularActivity;
 
 
 class StudentController extends Controller
@@ -33,7 +36,12 @@ class StudentController extends Controller
     {
         // dd($request);
         $data = $request->only(['name', 'NIS', 'kelas']);
-        Student::create($data);
+        $student = Student::create($data);
+
+        if ($student) {
+            Session::flash('status', 'success');
+            return redirect('/student');
+        }
     }
     public function edit($id)
     {
@@ -47,5 +55,28 @@ class StudentController extends Controller
         $data = $request->only(['name', 'NIM', 'kelas']);
         $model = Student::find($id);
         $model->update($data);
+    }
+
+    public function delete($id)
+    {
+        $data = Student::find($id);
+        return view('Pages.deleteStudent', ['data' => $data]);
+    }
+
+    public function cancelDelete()
+    {
+        return redirect('/student');
+    }
+
+    public function deleteData(Request $request, $id)
+    {
+        $data = Student::find($id);
+        if ($data) {
+            $data->extracurriculars()->delete();
+            $deleted = $data->delete();
+            if ($deleted) {
+                return redirect('/student');
+            }
+        }
     }
 }

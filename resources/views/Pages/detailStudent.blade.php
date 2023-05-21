@@ -36,9 +36,20 @@
                             </td>
                         </tr>
                     </table>
-                    <div class="">
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="m-3">
+                            <a href="/editStudent/{{ $data_siswa->id }}" class="btn btn-edit-data m-auto">edit data</a>
+                        </div>
+                        <div class="m-3">
+                            <a href="/deleteStudent/{{ $data_siswa->id }}" class="btn btn-edit-data m-auto">hapus data</a>
+                        </div>
+                    </div>
+                    {{-- <div class="">
                         <a href="/editStudent/{{ $data_siswa->id }}" class="btn btn-edit-data m-auto">edit data</a>
                     </div>
+                    <div class="">
+                        <a href="/editStudent/{{ $data_siswa->id }}" class="btn btn-edit-data m-auto">edit data</a>
+                    </div> --}}
                 </div>
             </div>
         </div>

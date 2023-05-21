@@ -3,6 +3,12 @@
     <h4 class="title text-center fw-bold my-4">
         Daftar Nama Siswa/Siswi</h4>
     <div class="student-table p-3">
+        {{-- Menampilkan session flash --}}
+        @if (Session::has('status'))
+            <div class="alert alert-primary" role="alert">
+                Data Berhasil Ditambahkan
+            </div>
+        @endif
         <div class="d-flex justify-content-end my-3">
             <a href="/addStudent" class="btn btn-add-data">+add</a>
         </div>

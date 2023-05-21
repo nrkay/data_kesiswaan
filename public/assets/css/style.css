@@ -2,6 +2,18 @@
     background-color: #F1F6F9;
 }; */
 
+/* style deleteStudent.blade.php */
+.conf-delete {
+    background-color: #212A3E;
+    border-radius: 25px;
+}
+
+.conf-delete .btn {
+    background-color: #9BA4B5 !important;
+    color: white;
+}
+/* end style seletestudent.blade.php */
+
 /* style editStuden.blade.php */
 .table-edit {
     background-color: white;

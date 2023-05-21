@@ -31,6 +31,12 @@ Route::get('/addStudent', [StudentController::class, 'add']);
 Route::get('/editStudent/{id}', [StudentController::class, 'edit']);
 Route::post('/addStudent', [StudentController::class, 'store']);
 Route::put('/editStudent/{id}', [StudentController::class, 'update']);
+Route::get('/deleteStudent/{id}', [StudentController::class, 'delete']);
+Route::get('/cancelDelete', [StudentController::class, 'cancelDelete']);
+Route::get('/deleteData/{id}', [StudentController::class, 'deleteData']);
+
+
+
 
 
 
