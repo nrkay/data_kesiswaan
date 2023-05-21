@@ -40,6 +40,7 @@ class StudentController extends Controller
 
         if ($student) {
             Session::flash('status', 'success');
+            Session::flash('massage', 'Berhasil menambahkan data');
             return redirect('/student');
         }
     }
@@ -77,6 +78,23 @@ class StudentController extends Controller
             if ($deleted) {
                 return redirect('/student');
             }
+        }
+    }
+
+    public function deletedStudentList()
+    {
+        $data = Student::onlyTrashed()->with('classroom.homeroom_teacher', 'extracurriculars')->get();
+        return view('Pages.deletedList', ['data' => $data]);
+    }
+
+    public function restoreStudent($id)
+    {
+        $data = Student::withTrashed()->where('id', $id)->restore();
+        if ($data) {
+            Session::flash('status', 'berhasil');
+            Session::flash('massage', 'Berhasil memulihkan data');
+
+            return redirect('/student');
         }
     }
 }

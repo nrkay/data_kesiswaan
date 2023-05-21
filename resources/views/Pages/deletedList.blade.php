@@ -1,18 +1,8 @@
 @extends('welcome')
 @section('content')
     <h4 class="title text-center fw-bold my-4">
-        Daftar Nama Siswa/Siswi</h4>
+        Data Siswa/Siwi yang Terhapus</h4>
     <div class="student-table p-3">
-        {{-- Menampilkan session flash --}}
-        @if (Session::has('status'))
-            <div class="alert alert-primary" role="alert">
-                {{ Session::get('massage') }}
-            </div>
-        @endif
-        <div class="d-flex justify-content-end my-3">
-            <a href="/deletedStudentList" class="btn btn-add-data">deleted data</a>
-            <a href="/addStudent" class="btn btn-add-data">+add</a>
-        </div>
         <table class="table table-siswa border">
             <thead>
                 <tr>
@@ -27,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data_siswa as $siswa)
+                @foreach ($data as $siswa)
                     <tr>
                         <td class="border text-center" scope="row">{{ $loop->iteration }}</th>
                         <td class="border">{{ $siswa->name }}</td>
@@ -39,8 +29,8 @@
                                 - {{ $ekskul->nama_extracurricular }} <br>
                             @endforeach
                         </td>
-                        <td class="border text-center"><a href="/detail/{{ $siswa->id }}">
-                                <button type="button" class="btn btn-detail-student">Detail</button>
+                        <td class="border text-center"><a href="/restore/{{ $siswa->id }}">
+                                <button type="button" class="btn btn-detail-student">Pulihkan</button>
                             </a>
                         </td>
 
